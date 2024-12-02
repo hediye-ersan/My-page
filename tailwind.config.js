@@ -2,8 +2,14 @@
 export default {
   content: ["./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",],
+  darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        playfair: ['Playfair Display', 'serif'],
+        inter: ['Inter', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }
