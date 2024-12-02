@@ -1,6 +1,10 @@
 import React from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
+import myData from '../data/myData';
 
-const Skills = ({ skillsData }) => {
+const Skills = () => {
+  const { language } = useLanguage();  
+  const skillsData = myData[language].skills;
   return (
     <section className="py-16 font-inter">
       <h2 className=" text-5xl ">{skillsData.title}</h2>

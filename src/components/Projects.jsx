@@ -1,6 +1,12 @@
 import React from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
+import myData from '../data/myData';
 
-const Projects = ({ projectsData }) => {
+const Projects = () => {
+  const { language } = useLanguage();  
+  const projectsData = myData[language].projects;
+ 
+  
   return (
     <section className="m-24 ">
       <h2 className="text-4xl font-medium font-inter ">{projectsData.title}</h2>

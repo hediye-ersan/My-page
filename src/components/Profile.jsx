@@ -1,6 +1,12 @@
 import React from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
+import myData from '../data/myData';
 
-const Profile = ({ profileData }) => {
+const Profile = () => {
+  const { language } = useLanguage();  
+  const profileData = myData[language].profile;
+
+
   return (
     <section className="bg-[#F4F4F4] font-inter">
       <h2 className="text-4xl pt-16 ">{profileData.title}</h2>

@@ -1,6 +1,10 @@
 import React from 'react';
+import myData from '../data/myData';
+import { useLanguage } from '../contexts/LanguageContext';
 
-const Footer = ({ footerData }) => {
+const Footer = () => {
+  const { language } = useLanguage();  
+  const footerData = myData[language].footer;
   return (
     <footer className="my-24">
       <div className=" mx-auto text-center flex justify-center items-center w-3/5" >
