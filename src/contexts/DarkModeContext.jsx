@@ -2,7 +2,7 @@ import React, { createContext, useState, useContext } from 'react';
 
 export const DarkModeContext = createContext();
 
-export const DarkModeProvider = ({ children }) => {
+ const DarkModeProvider = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(false); 
 
   const toggleDarkMode = () => {
@@ -16,5 +16,5 @@ export const DarkModeProvider = ({ children }) => {
   );
 };
 
-
-export const useDarkMode = () => useContext(DarkModeContext);//custom hook ekledim.
+export const useDarkMode = () => useContext(DarkModeContext);
+export default DarkModeProvider;
