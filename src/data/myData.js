@@ -1,4 +1,4 @@
-{
+const myData = {
     "en": {
         "bio": {
             "title": "Hi! 👋",
@@ -54,7 +54,7 @@
                 ]
             }
         },
-        "project": {
+        "projects": {
             "title": "Projects",
             "firstProject": {
                 "title": "Random Jokes",
@@ -153,7 +153,7 @@
                 ]
             }
         },
-        "project": {
+        "projects": {
             "title": "Projeler",
             "firstProject": {
                 "title": "Rastgele Şakalar",
@@ -198,3 +198,4 @@
         }
     }
 }
+export default myData;
