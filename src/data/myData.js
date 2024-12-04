@@ -1,11 +1,15 @@
+
+
 const myData = {
     "en": {
         "bio": {
             "title": "Hi! 👋",
             "text": "I'm Hediye. I'm a full-stack developer. I can craft solid and scalable frontend products. Let's meet!",
             "logo1": "/images/github.png",
+            "darkLogo1": "/images/github1.png",
             "logo2": "/images/LinkedIn.png",
-            "intro": "Currently Freelancing for UX, UI & Web Design Project. Invite me to join your team...",
+            "darkLogo2": "/images/LinkedIn1.png",
+            "intro": `Currently Freelancing for UX, UI & Web Design Project. Invite me to join your team ->`,
             "image": "/images/header-img.png"
         },
         "skills": {
@@ -103,8 +107,10 @@ const myData = {
             "title": "Merhaba! 👋",
             "text": "Ben Hediye. Ben bir full-stack geliştiriciyim. Sağlam ve ölçeklenebilir frontend ürünleri geliştirebilirim. Tanışalım!",
             "logo1": "/images/github.png",
+            "darkLogo1": "/images/github1.png",
             "logo2": "/images/LinkedIn.png",
-            "intro": "Şu anda UX, UI ve Web Tasarım projeleri için freelance çalışıyorum. Ekibinize katılmam için beni davet edin...",
+            "darkLogo2": "/images/LinkedIn1.png",
+            "intro": "Şu anda UX, UI ve Web Tasarım Projeleri için Freelance çalışıyorum. Ekibinize katılmam için beni davet edin -> ",
             "image": "/images/header-img.png"
         },
         "skills": {

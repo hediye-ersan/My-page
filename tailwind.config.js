@@ -12,8 +12,6 @@ export default {
       colors: {
         pink: '#E92577',
         
-        blackText: '#0A0A14',
-        darkText: '#FFFFFF'
       }
     },
   },
