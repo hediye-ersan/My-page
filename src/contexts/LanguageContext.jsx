@@ -3,18 +3,25 @@ import myData from '../data/myData';
 
 const LanguageContext = createContext();
 
+
 const LanguageProvider = ({ children }) => {
-  const [language, setLanguage] = useState('en');
+  const [language, setLanguage] = useState(() => {
+    const storedLanguage = localStorage.getItem('language');
+    if (storedLanguage) {
+      return storedLanguage;
+    }
+    const browserLanguage = navigator.language.slice(0, 2);
+    return myData[browserLanguage] ? browserLanguage : 'en';
+  });
+
 
   useEffect(() => {
-    const browserLanguage = navigator.language.slice(0, 2);
-    if (myData[browserLanguage]) {
-      setLanguage(browserLanguage);
-    }
-  }, []);
+    localStorage.setItem('language', language);
+  }, [language]);
 
   const toggleLanguage = () => {
-    setLanguage(language === 'en' ? 'tr' : 'en');
+    const newLanguage = language === 'en' ? 'tr' : 'en';
+    setLanguage(newLanguage);
   };
 
   return (
