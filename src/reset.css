@@ -3,9 +3,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Londrina+Solid:wght@100;300;400;900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quattrocento:wght@400;700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Satisfy&display=swap');
 
-*{
+/**{
   border: 1px rgb(255, 0, 166) solid;
-}
+}*/
 *,
 *::before,
 *::after {
@@ -21,6 +21,18 @@ body {
   background-color: white;
   
 }
+body.dark {
+  color: white;
+}
+.bg-cream {
+  background-color: #F4F4F4;
+}
+
+.bg-cream.dark {
+  background-color: #2A262B;
+}
+
+
 
 h1, h2, h3, h4, h5, h6 {
   font-size: 100%; 
