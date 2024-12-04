@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-import LanguageProvider, {useLanguage} from './contexts/LanguageContext';
-import DarkModeProvider, {useDarkMode} from './contexts/DarkModeContext';
+import LanguageProvider from './contexts/LanguageContext';
+import DarkModeProvider, { useDarkMode } from './contexts/DarkModeContext';
 import './App.css'
 import Header from './components/Header';
 import Skills from './components/Skills';
@@ -11,18 +11,7 @@ import Footer from './components/Footer';
 
 import { FaMoon, FaSun } from 'react-icons/fa';
 
-const LanguageToggleButton = () => {
-  const { language, toggleLanguage } = useLanguage();
 
-  return (
-    <button
-      className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md"
-      onClick={toggleLanguage}
-    >
-      {language === 'en' ? 'Türkçeye Çevir' : 'Switch to English'}
-    </button>
-  );
-};
 
 const DarkModeToggleButton = () => {
   const { isDarkMode, toggleDarkMode } = useDarkMode();
@@ -52,13 +41,13 @@ const DarkModeToggleButton = () => {
 
 
 function App() {
+
   return (
     <>
       <LanguageProvider>
         <DarkModeProvider>
           <div className="bg-[url('/images/sayfa-susleri.png')] bg-no-repeat z-20 w-full">
-            <DarkModeToggleButton/>
-            <LanguageToggleButton />
+            <DarkModeToggleButton />
             <Header />
             <Skills />
             <Profile />
