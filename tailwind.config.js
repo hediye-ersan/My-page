@@ -9,6 +9,12 @@ export default {
         playfair: ['Playfair Display', 'serif'],
         inter: ['Inter', 'sans-serif'],
       },
+      colors: {
+        pink: '#E92577',
+        
+        blackText: '#0A0A14',
+        darkText: '#FFFFFF'
+      }
     },
   },
   plugins: [],
