@@ -12,6 +12,11 @@ export default {
       colors: {
         pink: '#E92577',
         
+      },
+      screens:{
+        sm: "640px",
+        md:"760px",
+        
       }
     },
   },

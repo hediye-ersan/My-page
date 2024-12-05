@@ -8,15 +8,16 @@ const Skills = () => {
   const { language } = useLanguage();  
   const skillsData = myData[language].skills;
   return (
-    <section className={`py-16 font-inter ${isDarkMode ? 'bg-[#484148] text-white' : ''}`}>
-      <h2 className=" text-5xl ">{skillsData.title}</h2>
-      <div className="flex flex-wrap gap-8 mt-12 mb-12 justify-center text-2xl">
+    <section className={`pt-20 pb-24  font-inter${isDarkMode ? 'text-[#F4F4F4] bg-[#484148]' : ''}`}>
+      <h2 className=" text-5xl pb-12 ">{skillsData.title}</h2>
+      
+      <div className="flex flex-wrap gap-8 justify-center text-2xl text-center">
         {skillsData.skill.map((skill, index) => (
-          <div key={index} className="text-center">
+          <div key={index} className="text-center ">
             <img
               src={skill.image}
               alt={skill.name}
-              className="mx-auto mb-2"
+              className="mx-auto"
             />
             <p className={`text-[#777777] ${isDarkMode ? 'text-[#D9D9D9]' : '' }`}>{skill.name}</p>
           </div>
