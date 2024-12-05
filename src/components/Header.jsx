@@ -3,6 +3,7 @@ import "../reset.css"
 import { useLanguage } from '../contexts/LanguageContext';
 import myData from '../data/myData';
 import { useDarkMode } from '../contexts/DarkModeContext';
+import { FaMoon, FaSun } from 'react-icons/fa';
 
 
 const Header = () => {
@@ -17,6 +18,36 @@ const Header = () => {
     .replace(/(Freelancing|UX|UI|Web Design|Web Tasarım|Freelance)/g, (match) => {
       return `<span class="text-pink">${match}</span>`;
     });
+
+  const DarkModeToggleButton = () => {
+    const { isDarkMode, toggleDarkMode } = useDarkMode();
+
+    return (
+      <div className='flex gap-1 justify-center items-center'>
+        <button
+          className={`p-1 w-16  flex
+          ${isDarkMode ? 'bg-[#000000] text-yellow-300 justify-start' : 'bg-[#E92577] text-gray-800 justify-end'} 
+          rounded-full transition-all duration-300`}
+          onClick={toggleDarkMode}
+        >
+          {/* İç yuvarlak simge */}
+          <div
+            className={`w-6 h-6 flex items-center justify-center rounded-full 
+            ${isDarkMode ? 'bg-gray-900' : 'bg-yellow-300'}`}
+          >
+            {isDarkMode ? (
+              <FaMoon className="text-yellow-300" />
+            ) : (
+              <FaSun className="text-yellow-300" />
+            )}
+          </div>
+        </button>
+        <span>
+          {isDarkMode ? 'LIGHT MODE':'DARK MODE'}
+        </span>
+      </div>
+    );
+  };
 
   const LanguageToggleButton = () => {
     const { language, toggleLanguage } = useLanguage();
@@ -42,14 +73,19 @@ const Header = () => {
   return (
 
 
-    <section className={`bg-[#F4F4F4] font-inter text-left px-28 py-24 z-10  ${isDarkMode ? 'text-white bg-[#2A262B]' : ''}`}>
-      <div className='text-right pb-4'><LanguageToggleButton /></div>
+    <section className={`font-inter text-left px-32 py-20 z-10  ${isDarkMode ? 'text-white bg-[#2A262B]' : 'bg-[#F4F4F4] '}`}>
+      
+      <div className=' flex justify-end gap-8'>
+        <DarkModeToggleButton />
+        <LanguageToggleButton />
+      </div>
+      
 
       <header>
         <div>
           <h1 className='font-inter text-3xl'>{langData.title}</h1>
           <div className="flex justify-center ">
-            <p className='text-[42px] max-w-[14]'>{langData.text}</p>
+            <p className='text-[42px]'>{langData.text}</p>
             <img src={langData.image} alt="Profile" />
           </div>
         </div>

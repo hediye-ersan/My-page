@@ -2,61 +2,37 @@ import React from 'react';
 
 import LanguageProvider from './contexts/LanguageContext';
 import DarkModeProvider, { useDarkMode } from './contexts/DarkModeContext';
-import './App.css'
+import './reset.css'
 import Header from './components/Header';
 import Skills from './components/Skills';
 import Profile from './components/Profile';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
 
-import { FaMoon, FaSun } from 'react-icons/fa';
 
 
 
-const DarkModeToggleButton = () => {
-  const { isDarkMode, toggleDarkMode } = useDarkMode();
 
-  return (
-    <button
-      className={`p-1 w-16  flex
-      ${isDarkMode ? 'bg-gray-900 text-yellow-300 justify-start' : 'bg-[#E92577] text-gray-800 justify-end'} 
-      rounded-full transition-all duration-300`}
-      onClick={toggleDarkMode}
-    >
-      {/* İç yuvarlak simge */}
-      <div
-        className={`w-6 h-6 flex items-center justify-center rounded-full 
-        ${isDarkMode ? 'bg-gray-900' : 'bg-yellow-300'}`}
-      >
-        {isDarkMode ? (
-          <FaMoon className="text-yellow-300" />
-        ) : (
-          <FaSun className="text-yellow-300" />
-        )}
-      </div>
-    </button>
 
-  );
-};
 
 
 function App() {
 
   return (
-    <>
-      <LanguageProvider>
-        <DarkModeProvider>
-          <div className="bg-[url('/images/sayfa-susleri.png')] bg-no-repeat z-20 w-full">
-            <DarkModeToggleButton />
-            <Header />
-            <Skills />
-            <Profile />
-            <Projects />
-            <Footer />
-          </div>
-        </DarkModeProvider>
-      </LanguageProvider>
-    </>
+
+    <LanguageProvider>
+      <DarkModeProvider>
+        <div className="bg-[url('/images/sayfa-susleri.png')] bg-no-repeat z-20 w-full">
+        
+          <Header />
+          <Skills />
+          <Profile />
+          <Projects />
+          <Footer />
+        </div>
+      </DarkModeProvider>
+    </LanguageProvider>
+
   )
 }
 
