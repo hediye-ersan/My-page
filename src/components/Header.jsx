@@ -73,22 +73,22 @@ const Header = () => {
   return (
 
 
-    <section className={`font-inter sm:text-left text-center p-36 pb-20 z-10  ${isDarkMode ? 'text-white bg-[#2A262B]' : 'bg-[#F4F4F4] '}`}>
+    <section className={`font-inter sm:text-left text-center px-36 py-20 z-10  ${isDarkMode ? 'text-white bg-[#2A262B]' : 'bg-[#F4F4F4] '}`}>
       
-      <div className=' flex justify-end gap-8'>
+      <div className=' flex justify-end gap-8 pb-12 sm:pb-0'>
         <DarkModeToggleButton />
         <LanguageToggleButton />
       </div>
       
       <header>
-        <div >
+        <div>
           <h1 className='font-inter text-3xl'>{langData.title}</h1>
-          <div className="flex justify-between w-full flex-wrap sm:flex-nowrap">
+          <div className="flex justify-between w-full flex-wrap sm:flex-nowrap ">
             <p className='text-[42px] sm:pr-32'>{langData.text}</p>
             <img src={langData.image} alt="Profile" />
           </div>
         </div>
-        <article className='text-lg'>
+        <article className='text-lg pt-6 sm:pt-0'>
           <figure className='flex gap-6 justify-center sm:justify-start'>
 
             <img src={isDarkMode ? langData.darkLogo1 : langData.logo1} alt="Github" />
