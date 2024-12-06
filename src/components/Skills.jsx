@@ -12,6 +12,8 @@ const Skills = () => {
       
       <h2 className=" text-5xl pb-12 ">{skillsData.title}</h2>
       <div className="sm:flex sm:flex-wrap gap-8 sm:justify-center text-2xl text-center grid grid-cols-2 md:grid-cols-3"> 
+        
+        {/*map uygulandı*/}
         {skillsData.skill.map((skill, index) => (
           <div key={index} className="text-center ">
             <img

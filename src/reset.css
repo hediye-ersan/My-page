@@ -9,7 +9,7 @@
 
 #root {
   min-width: auto;
-  max-width: 1440px;
+  max-width: fit-content;
   margin: 0 auto;
   text-align: center;
   padding: 0rem;
