@@ -8,7 +8,7 @@
 }*/
 
 #root {
-  min-width: 600px;
+  min-width: auto;
   max-width: 1440px;
   margin: 0 auto;
   text-align: center;
