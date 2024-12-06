@@ -22,7 +22,7 @@ function App() {
 
     <LanguageProvider>
       <DarkModeProvider>
-        <div className="bg-[url('/images/sayfa-susleri.png')] z-10 relative">
+        <div>
           <Header />
           <Skills />
           <Profile />
