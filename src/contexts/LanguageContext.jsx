@@ -14,6 +14,7 @@ const LanguageProvider = ({ children }) => {
     return myData[browserLanguage] ? browserLanguage : 'en';
   });
 
+  const currentLangContent = myData[language];
 
   useEffect(() => {
     localStorage.setItem('language', language);
@@ -25,7 +26,7 @@ const LanguageProvider = ({ children }) => {
   };
 
   return (
-    <LanguageContext.Provider value={{ language, toggleLanguage }}>
+    <LanguageContext.Provider value={{ language, currentLangContent, toggleLanguage }}>
       {children}
     </LanguageContext.Provider>
   );

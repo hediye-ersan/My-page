@@ -5,8 +5,8 @@ import { useDarkMode } from '../contexts/DarkModeContext';
 
 const Projects = () => {
   const { isDarkMode } = useDarkMode();
-  const { language } = useLanguage();
-  const projectsData = myData[language].projects;
+  const { currentLangContent } = useLanguage();
+  const projectsData = currentLangContent.projects;
 
 
   return (

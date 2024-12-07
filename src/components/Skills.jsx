@@ -5,8 +5,8 @@ import { useDarkMode } from '../contexts/DarkModeContext';
 
 const Skills = () => {
   const { isDarkMode } = useDarkMode();
-  const { language } = useLanguage();  
-  const skillsData = myData[language].skills;
+  const { currentLangContent } = useLanguage();
+  const skillsData = currentLangContent.skills;
   return (
     <section className={`pt-20 pb-24  font-inter ${isDarkMode ? 'text-[#F4F4F4] bg-[#484148]' : ''}`}>
       

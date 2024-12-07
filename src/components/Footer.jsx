@@ -5,8 +5,8 @@ import { useDarkMode } from '../contexts/DarkModeContext';
 
 const Footer = () => {
   const {isDarkMode} = useDarkMode();
-  const { language } = useLanguage();  
-  const footerData = myData[language].footer;
+  const { currentLangContent } = useLanguage();
+  const footerData = currentLangContent.footer;
   return (
     <footer className={`${isDarkMode ? 'bg-[#484148] text-white' : ''}`}>
       <div className=" mx-auto text-center flex justify-center items-center w-3/5 pt-20 pb-28" >

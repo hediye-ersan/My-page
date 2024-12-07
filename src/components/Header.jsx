@@ -8,13 +8,13 @@ import { FaMoon, FaSun } from 'react-icons/fa';
 
 const Header = () => {
   const { isDarkMode } = useDarkMode();
-  const { language } = useLanguage();
-  const langData = myData[language].bio;
+  const { currentLangContent } = useLanguage();
+  const bioData = currentLangContent.bio;
 
 
   const email = "hediye@example.com";
   //html içerik render etmek
-  const pinkIntro = langData.intro
+  const pinkIntro = bioData.intro
     .replace(/(Freelancing|UX|UI|Web Design|Web Tasarım|Freelance)/g, (match) => {
       return `<span class="text-pink">${match}</span>`;
     });
@@ -82,17 +82,17 @@ const Header = () => {
       
       <header>
         <div>
-          <h1 className='font-inter text-3xl'>{langData.title}</h1>
+          <h1 className='font-inter text-3xl'>{bioData.title}</h1>
           <div className="flex justify-between w-full flex-wrap sm:flex-nowrap ">
-            <p className='text-[42px] sm:pr-32'>{langData.text}</p>
-            <img src={langData.image} alt="Profile" />
+            <p className='text-[42px] sm:pr-32'>{bioData.text}</p>
+            <img src={bioData.image} alt="Profile" />
           </div>
         </div>
         <article className='text-lg pt-6 sm:pt-0'>
           <figure className='flex gap-6 justify-center sm:justify-start'>
 
-            <img src={isDarkMode ? langData.darkLogo1 : langData.logo1} alt="Github" />
-            <img src={isDarkMode ? langData.darkLogo2 : langData.logo2} alt="Linkedin" />
+            <img src={isDarkMode ? bioData.darkLogo1 : bioData.logo1} alt="Github" />
+            <img src={isDarkMode ? bioData.darkLogo2 : bioData.logo2} alt="Linkedin" />
           </figure>
 
           <p className='text-lg pt-8 sm:w-2/4 sm:text-left w-full'><span dangerouslySetInnerHTML={{ __html: pinkIntro }}></span>

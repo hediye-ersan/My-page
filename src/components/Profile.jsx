@@ -5,8 +5,8 @@ import { useDarkMode } from '../contexts/DarkModeContext';
 
 const Profile = () => {
   const {isDarkMode} = useDarkMode();
-  const { language } = useLanguage();  
-  const profileData = myData[language].profile;
+  const { currentLangContent } = useLanguage();
+  const profileData = currentLangContent.profile;
 
 
   return (
