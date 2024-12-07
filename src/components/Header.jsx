@@ -1,7 +1,6 @@
 import React from 'react';
 import "../reset.css"
 import { useLanguage } from '../contexts/LanguageContext';
-import myData from '../data/myData';
 import { useDarkMode } from '../contexts/DarkModeContext';
 import { FaMoon, FaSun } from 'react-icons/fa';
 
@@ -73,7 +72,7 @@ const Header = () => {
   return (
 
 
-    <section className={`font-inter sm:text-left text-center px-36 py-20 z-10  ${isDarkMode ? 'text-white bg-[#2A262B]' : 'bg-[#F4F4F4] '}`}>
+    <section className={` sm:text-left text-center px-36 py-20 z-10  ${isDarkMode ? 'text-white bg-[#2A262B]' : 'bg-[#F4F4F4] '}`}>
       
       <div className=' flex justify-end gap-8 pb-12 sm:pb-0'>
         <DarkModeToggleButton />
@@ -82,7 +81,7 @@ const Header = () => {
       
       <header>
         <div>
-          <h1 className='font-inter text-3xl'>{bioData.title}</h1>
+          <h1 className=' text-3xl'>{bioData.title}</h1>
           <div className="flex justify-between w-full flex-wrap sm:flex-nowrap ">
             <p className='text-[42px] sm:pr-32'>{bioData.text}</p>
             <img src={bioData.image} alt="Profile" />
@@ -96,7 +95,7 @@ const Header = () => {
           </figure>
 
           <p className='text-lg pt-8 sm:w-2/4 sm:text-left w-full'><span dangerouslySetInnerHTML={{ __html: pinkIntro }}></span>
-            <a href={`mailto:${email}`} className="text-pink font-inter">{email}</a></p>
+            <a href={`mailto:${email}`} className="text-pink ">{email}</a></p>
         </article>
       </header>
     </section>

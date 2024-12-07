@@ -15,10 +15,11 @@
   padding: 0rem;
 }
 body {
-  font-family: Arial, sans-serif; 
+  
   line-height: 1.5; 
   color: black;
   background-color: white;
+  @apply font-inter;
   
 }
 button {

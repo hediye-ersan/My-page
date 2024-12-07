@@ -16,7 +16,7 @@ function App() {
 
     <LanguageProvider>
       <DarkModeProvider>
-        <div>
+        <div className='font-inter'>
           <Header />
           <Skills />
           <Profile />
