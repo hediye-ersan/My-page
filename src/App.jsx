@@ -1,7 +1,6 @@
 import React from 'react';
 
 import LanguageProvider from './contexts/LanguageContext';
-import DarkModeProvider, { useDarkMode } from './contexts/DarkModeContext';
 import './reset.css'
 import Header from './components/Header';
 import Skills from './components/Skills';
@@ -15,7 +14,7 @@ function App() {
   return (
 
     <LanguageProvider>
-      <DarkModeProvider>
+      
         <div className='font-inter'>
           <Header />
           <Skills />
@@ -23,7 +22,7 @@ function App() {
           <Projects />
           <Footer />
         </div>
-      </DarkModeProvider>
+      
     </LanguageProvider>
 
   )

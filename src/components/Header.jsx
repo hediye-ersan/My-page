@@ -1,12 +1,10 @@
 import React from 'react';
 import "../reset.css"
 import { useLanguage } from '../contexts/LanguageContext';
-import { useDarkMode } from '../contexts/DarkModeContext';
-import { FaMoon, FaSun } from 'react-icons/fa';
-
+import DarkModeToggle from './DarkModeToggle';
 
 const Header = () => {
-  const { isDarkMode } = useDarkMode();
+
   const { currentLangContent } = useLanguage();
   const bioData = currentLangContent.bio;
 
@@ -18,67 +16,37 @@ const Header = () => {
       return `<span class="text-pink">${match}</span>`;
     });
 
-  const DarkModeToggleButton = () => {
-    const { isDarkMode, toggleDarkMode } = useDarkMode();
-
-    return (
-      <div className='flex gap-1 justify-center items-center'>
+    const LanguageToggleButton = () => {
+      const { language, toggleLanguage } = useLanguage();
+  
+  
+      return (
         <button
-          className={`p-1 w-16  flex
-          ${isDarkMode ? 'bg-[#000000] text-yellow-300 justify-start' : 'bg-[#E92577] text-gray-800 justify-end'} 
-          rounded-full transition-all duration-300`}
-          onClick={toggleDarkMode}
+          className=" bg-transparent"
+          onClick={toggleLanguage}
         >
-          {/* İç yuvarlak simge */}
-          <div
-            className={`w-6 h-6 flex items-center justify-center rounded-full 
-            ${isDarkMode ? 'bg-gray-900' : 'bg-yellow-300'}`}
-          >
-            {isDarkMode ? (
-              <FaMoon className="text-yellow-300" />
-            ) : (
-              <FaSun className="text-yellow-300" />
-            )}
-          </div>
+          {language === 'en' ? (
+            <>
+              <span className="text-pink text-bold">TÜRKÇE</span>'YE GEÇ
+            </>
+          ) : (
+            <>
+              SWITCH TO <span className="text-pink">ENGLISH</span>
+            </>
+          )}
         </button>
-        <span>
-          {isDarkMode ? 'LIGHT MODE':'DARK MODE'}
-        </span>
-      </div>
-    );
-  };
+      );
+    };
 
-  const LanguageToggleButton = () => {
-    const { language, toggleLanguage } = useLanguage();
-
-
-    return (
-      <button
-        className=" bg-transparent"
-        onClick={toggleLanguage}
-      >
-        {language === 'en' ? (
-          <>
-            <span className="text-pink text-bold">TÜRKÇE</span>'YE GEÇ
-          </>
-        ) : (
-          <>
-            SWITCH TO <span className="text-pink">ENGLISH</span>
-          </>
-        )}
-      </button>
-    );
-  };
   return (
 
+    <section className="sm:text-left text-center px-36 py-20 z-10 dark:bg-dark-bg1 dark:text-dark-text">
 
-    <section className={` sm:text-left text-center px-36 py-20 z-10  ${isDarkMode ? 'text-white bg-[#2A262B]' : 'bg-[#F4F4F4] '}`}>
-      
       <div className=' flex justify-end gap-8 pb-12 sm:pb-0'>
-        <DarkModeToggleButton />
+        <DarkModeToggle />
         <LanguageToggleButton />
       </div>
-      
+
       <header>
         <div>
           <h1 className=' text-3xl'>{bioData.title}</h1>
@@ -90,8 +58,28 @@ const Header = () => {
         <article className='text-lg pt-6 sm:pt-0'>
           <figure className='flex gap-6 justify-center sm:justify-start'>
 
-            <img src={isDarkMode ? bioData.darkLogo1 : bioData.logo1} alt="Github" />
-            <img src={isDarkMode ? bioData.darkLogo2 : bioData.logo2} alt="Linkedin" />
+          <img
+              src={bioData.logo1}
+              alt="Github"
+              className=" dark:hidden" // Normal modda göster
+            />
+            <img
+              src={bioData.darkLogo1}
+              alt="Github"
+              className=" hidden dark:block" // Dark modda göster
+            />
+
+            {/* Normal modda logo2, dark modda Darklogo2 */}
+            <img
+              src={bioData.logo2}
+              alt="Linkedin"
+              className=" dark:hidden" // Normal modda göster
+            />
+            <img
+              src={bioData.darkLogo2}
+              alt="Linkedin"
+              className=" hidden dark:block" // Dark modda göster
+            />
           </figure>
 
           <p className='text-lg pt-8 sm:w-2/4 sm:text-left w-full'><span dangerouslySetInnerHTML={{ __html: pinkIntro }}></span>

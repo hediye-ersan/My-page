@@ -11,6 +11,10 @@ export default {
       },
       colors: {
         pink: '#E92577',
+        'dark-bg1': '#2A262B',
+        'dark-bg2': '#484148',
+        'dark-text': '#FFFFFF'
+        
         
       },
       screens:{

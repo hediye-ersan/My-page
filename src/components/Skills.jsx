@@ -1,13 +1,13 @@
 import React from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
-import { useDarkMode } from '../contexts/DarkModeContext';
+import DarkModeToggle from './DarkModeToggle';
 
 const Skills = () => {
-  const { isDarkMode } = useDarkMode();
+
   const { currentLangContent } = useLanguage();
   const skillsData = currentLangContent.skills;
   return (
-    <section className={`pt-20 pb-24 ${isDarkMode ? 'text-[#F4F4F4] bg-[#484148]' : ''}`}>
+    <section className="pt-20 pb-24 dark:bg-dark-bg2 dark:text-dark-text">
       
       <h2 className=" text-5xl pb-12 ">{skillsData.title}</h2>
       <div className="sm:flex sm:flex-wrap gap-8 sm:justify-center text-2xl text-center grid grid-cols-2 md:grid-cols-3"> 
@@ -20,7 +20,7 @@ const Skills = () => {
               alt={skill.name}
               className="mx-auto"
             />
-            <p className={`text-[#777777] ${isDarkMode ? 'text-[#D9D9D9]' : '' }`}>{skill.name}</p>
+            <p className="text-[#777777] dark:text-dark-text">{skill.name}</p>
           </div>
         ))}
       </div>
