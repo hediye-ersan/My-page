@@ -4,7 +4,7 @@ const myData = {
     "en": {
         "bio": {
             "title": "Hi! 👋",
-            "text": "I'm Hediye. I'm a full-stack developer. I can craft solid and scalable frontend products. Let's meet!",
+            "text": "I am Hediye. I'm a software developer who is eager to learn new skills and motivated by seeing myself succeed in challenging processes. Let's get to know each other!",
             "logo1": "/images/github.png",
             "darkLogo1": "/images/github1.png",
             "logo2": "/images/LinkedIn.png",
@@ -38,6 +38,10 @@ const myData = {
                 {
                     "name": "Figma",
                     "image": "/images/figma-logo.png"
+                },
+                {
+                    "name": "Java",
+                    "image": "/images/java-logo.png"
                 }
             ]
         },
@@ -61,8 +65,8 @@ const myData = {
         "projects": {
             "title": "Projects",
             "firstProject": {
-                "title": "Random Jokes",
-                "text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam auti odit laborum aliquam voluptatum nisi mollitia",
+                "title": "Pizza Purchase Page",
+                "text": "By developing a dynamic web application with React and React Router, he gained experience in form management, validation and API integration using axios. He also reinforced his test-driven development approach and strengthened his technical skills by writing tests with Cypress.",
                 "skills":{
                     "react":"react",
                     "vercel": "vercel",
@@ -76,8 +80,8 @@ const myData = {
                 "image": "/images/laptop-img1.png"
             },
             "secondProject": {
-                "title": "Are you bored?",
-                "text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam auti odit laborum aliquam voluptatum nisi mollitia minima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!",
+                "title": "E-commerce App",
+                "text": "This project gave me experience in developing a dynamic full-stack e-commerce application using React and Redux, API integration, user management and security. I also improved my visual design and code maintainability skills by designing a modern, user-friendly interface with Tailwind CSS and creating reusable components.",
                 "skills":{
                     "react":"react",
                     "redux": "redux",
@@ -105,7 +109,7 @@ const myData = {
     "tr": {
         "bio": {
             "title": "Merhaba! 👋",
-            "text": "Ben Hediye. Ben bir full-stack geliştiriciyim. Sağlam ve ölçeklenebilir frontend ürünleri geliştirebilirim. Tanışalım!",
+            "text": "Ben Hediye. Yeni beceriler kazanmaya hevesli ve zorlu süreçlerde başarıya ulaştığımı görmenin motive ettiği bir yazılım geliştiriciyim. Tanışalım!",
             "logo1": "/images/github.png",
             "darkLogo1": "/images/github1.png",
             "logo2": "/images/LinkedIn.png",
@@ -162,8 +166,8 @@ const myData = {
         "projects": {
             "title": "Projeler",
             "firstProject": {
-                "title": "Rastgele Şakalar",
-                "text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam auti odit laborum aliquam voluptatum nisi mollitia",
+                "title": "Pizza Satın Alma Sayfası",
+                "text": "React ve React Router ile dinamik bir web uygulaması geliştirerek form yönetimi, doğrulama ve axios kullanarak API entegrasyonu konularında deneyim kazandırdı. Ayrıca, Cypress ile testler yazarak test odaklı geliştirme yaklaşımını pekiştirip teknik becerileri güçlendirdi.",
                 "skills":{
                     "react":"react",
                     "vercel": "vercel",
@@ -177,8 +181,8 @@ const myData = {
                 "image": "/images/laptop-img1.png"
             },
             "secondProject": {
-                "title": "Sıkıldın mı?",
-                "text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam auti odit laborum aliquam voluptatum nisi mollitia minima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!",
+                "title": "E-ticaret Uygulaması?",
+                "text": "Bu proje, React ve Redux kullanarak dinamik bir full-stack e-ticaret uygulaması geliştirme, API entegrasyonu, kullanıcı yönetimi ve güvenlik konularında deneyim kazandırdı. Ayrıca, Tailwind CSS ile modern, kullanıcı dostu bir arayüz tasarlayıp yeniden kullanılabilir bileşenler oluşturarak görsel tasarım ve kod sürdürülebilirliği becerilerimi geliştirdim.",
                 "skills":{
                     "react":"react",
                     "redux": "redux",
