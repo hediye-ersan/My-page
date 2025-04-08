@@ -16,78 +16,71 @@ const Header = () => {
       return `<span class="text-pink">${match}</span>`;
     });
 
-    const LanguageToggleButton = () => {
-      const { language, toggleLanguage } = useLanguage();
-  
-  
-      return (
-        <button
-          className=" bg-transparent"
-          onClick={toggleLanguage}
-        >
-          {language === 'en' ? (
-            <>
-              <span className="text-pink text-bold">TÜRKÇE</span>'YE GEÇ
-            </>
-          ) : (
-            <>
-              SWITCH TO <span className="text-pink">ENGLISH</span>
-            </>
-          )}
-        </button>
-      );
-    };
+  const LanguageToggleButton = () => {
+    const { language, toggleLanguage } = useLanguage();
+
+
+    return (
+      <button
+        className=" bg-transparent"
+        onClick={toggleLanguage}
+      >
+        {language === 'en' ? (
+          <>
+            <span className="text-pink text-bold">TÜRKÇE</span>'YE GEÇ
+          </>
+        ) : (
+          <>
+            SWITCH TO <span className="text-pink">ENGLISH</span>
+          </>
+        )}
+      </button>
+    );
+  };
 
   return (
+    <section className="sm:text-left text-center px-4 sm:px-36 py-20 z-10 dark:bg-dark-bg1 dark:text-dark-text">
 
-    <section className="sm:text-left text-center px-36 py-20 z-10 dark:bg-dark-bg1 dark:text-dark-text">
-
-      <div className=' flex justify-end gap-8 pb-12 sm:pb-0'>
+      {/* Dark Mode & Language Toggle */}
+      <div className='flex justify-center sm:justify-end gap-4 sm:gap-8 pb-8 sm:pb-0'>
         <DarkModeToggle />
         <LanguageToggleButton />
       </div>
 
       <header>
         <div>
-          <h1 className=' text-3xl'>{bioData.title}</h1>
-          <div className="flex justify-between w-full flex-wrap sm:flex-nowrap ">
-            <p className='text-[42px] sm:pr-32'>{bioData.text}</p>
-            <img src={bioData.image} alt="Profile" />
+          <h1 className='text-2xl sm:text-3xl mb-4'>{bioData.title}</h1>
+
+          <div className="flex flex-col-reverse sm:flex-row justify-between items-center gap-6">
+            <p className="text-2xl sm:text-[42px] sm:pr-32 leading-relaxed sm:leading-snug">
+              {bioData.text}
+            </p>
+
+            <img src={bioData.image} alt="Profile" className="w-40 sm:w-auto" />
           </div>
         </div>
-        <article className='text-lg pt-6 sm:pt-0'>
-          <figure className='flex gap-6 justify-center sm:justify-start'>
 
-          <img
-              src={bioData.logo1}
-              alt="Github"
-              className=" dark:hidden" // Normal modda göster
-            />
-            <img
-              src={bioData.darkLogo1}
-              alt="Github"
-              className=" hidden dark:block" // Dark modda göster
-            />
+        <article className='text-base sm:text-lg pt-6 sm:pt-0'>
+          <figure className='flex gap-6 justify-center sm:justify-start flex-wrap mt-6 sm:mt-0'>
 
-            {/* Normal modda logo2, dark modda Darklogo2 */}
-            <img
-              src={bioData.logo2}
-              alt="Linkedin"
-              className=" dark:hidden" // Normal modda göster
-            />
-            <img
-              src={bioData.darkLogo2}
-              alt="Linkedin"
-              className=" hidden dark:block" // Dark modda göster
-            />
+            {/* Github Icon */}
+            <img src={bioData.logo1} alt="Github" className="dark:hidden w-8 h-8" />
+            <img src={bioData.darkLogo1} alt="Github" className="hidden dark:block w-8 h-8" />
+
+            {/* Linkedin Icon */}
+            <img src={bioData.logo2} alt="Linkedin" className="dark:hidden w-8 h-8" />
+            <img src={bioData.darkLogo2} alt="Linkedin" className="hidden dark:block w-8 h-8" />
           </figure>
 
-          <p className='text-lg pt-8 sm:w-2/4 sm:text-left w-full'><span dangerouslySetInnerHTML={{ __html: pinkIntro }}></span>
-            <a href={`mailto:${email}`} className="text-pink ">{email}</a></p>
+          <p className='pt-6 sm:pt-8 sm:w-2/4 w-full mx-auto sm:mx-0'>
+            <span dangerouslySetInnerHTML={{ __html: pinkIntro }}></span>
+            <a href={`mailto:${email}`} className="text-pink">{email}</a>
+          </p>
         </article>
       </header>
     </section>
   );
+
 }
 
 export default Header;

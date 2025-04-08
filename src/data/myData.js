@@ -4,7 +4,7 @@ const myData = {
     "en": {
         "bio": {
             "title": "Hi! 👋",
-            "text": "I am Hediye. I'm a software developer who is eager to learn new skills and motivated by seeing myself succeed in challenging processes. Let's get to know each other!",
+            "text": "I'm Hediye, I’m a self-motivated Full Stack Developer eager to learn and grow. Through an intensive training at Workintech, I gained hands-on experience in both front-end and back-end development.",
             "logo1": "/images/github.png",
             "darkLogo1": "/images/github1.png",
             "logo2": "/images/LinkedIn.png",
@@ -51,14 +51,14 @@ const myData = {
                 "title": "Basic Information",
                 "birthday": "23.10.1999",
                 "city": "İstanbul",
-                "education": "Sakarya Uni. Mathematics, undergraduate, 2024",
-                "preferredRole": "Frontend, UI"
+                "education": "Sakarya Uni. Mathematics, Undergraduate, 2024",
+                "preferredRole": "Full Stack, UX, UI, Frontend, Backend, Web Design"
             },
             "aboutMe": {
                 "title": "About me",
                 "text": [
-                    "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam auti odit laborum aliquam voluptatum nisi mollitia",
-                    "Mnima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!"
+                    "I'm a passionate developer who enjoys creating and learning through every step of the software development process. I constantly strive to improve my technical and problem-solving skills with each new project.",
+                    "With a full stack background, I’ve had hands-on experience building real-world applications on both the front-end and back-end. Currently, I'm focused on expanding my knowledge with up-to-date technologies."
                 ]
             }
         },
@@ -109,7 +109,7 @@ const myData = {
     "tr": {
         "bio": {
             "title": "Merhaba! 👋",
-            "text": "Ben Hediye. Yeni beceriler kazanmaya hevesli ve zorlu süreçlerde başarıya ulaştığımı görmenin motive ettiği bir yazılım geliştiriciyim. Tanışalım!",
+            "text": "Ben Hediye, Full Stack geliştirme alanında kendini sürekli geliştiren, öğrenmeye açık bir yazılım geliştiricisiyim. Workintech’te aldığım yoğun eğitimle front-end ve back-end projelerinde pratik deneyim kazandım.",
             "logo1": "/images/github.png",
             "darkLogo1": "/images/github1.png",
             "logo2": "/images/LinkedIn.png",
@@ -143,7 +143,12 @@ const myData = {
                 {
                     "name": "Figma",
                     "image": "/images/figma-logo.png"
+                },
+                {
+                    "name": "Java",
+                    "image": "/images/java-logo.png"
                 }
+
             ]
         },
         "profile": {
@@ -152,14 +157,14 @@ const myData = {
                 "title": "Temel Bilgiler",
                 "birthday": "23.10.1999",
                 "city": "İstanbul",
-                "education": "Sakarya Uni. Matematik, lisans, 2024",
-                "preferredRole": "Frontend, UI"
+                "education": "Sakarya Uni. Matematik, Lisans, 2024",
+                "preferredRole": "Full Stack, UX, UI, Ön Uç Geliştirme, Arka Uç Geliştirme, Web Tasarım"
             },
             "aboutMe": {
                 "title": "Hakkımda",
                 "text": [
-                    "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam auti odit laborum aliquam voluptatum nisi mollitia",
-                    "Mnima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!"
+                    "Yazılım geliştirme sürecine tutkuyla bağlı, üretmeyi ve öğrenmeyi seven bir geliştiriciyim. Her yeni projede hem teknik becerilerimi hem de problem çözme yeteneğimi ileriye taşımaya çalışıyorum.",
+                    "Full Stack alanında eğitim alarak hem front-end hem de back-end tarafında gerçek projeler geliştirme fırsatı buldum. Şu anda da kendimi güncel teknolojilerle geliştirerek yolculuğuma devam ediyorum."
                 ]
             }
         },
@@ -181,7 +186,7 @@ const myData = {
                 "image": "/images/laptop-img1.png"
             },
             "secondProject": {
-                "title": "E-ticaret Uygulaması?",
+                "title": "E-ticaret Uygulaması",
                 "text": "Bu proje, React ve Redux kullanarak dinamik bir full-stack e-ticaret uygulaması geliştirme, API entegrasyonu, kullanıcı yönetimi ve güvenlik konularında deneyim kazandırdı. Ayrıca, Tailwind CSS ile modern, kullanıcı dostu bir arayüz tasarlayıp yeniden kullanılabilir bileşenler oluşturarak görsel tasarım ve kod sürdürülebilirliği becerilerimi geliştirdim.",
                 "skills":{
                     "react":"react",
