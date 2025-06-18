@@ -1,4 +1,4 @@
-# 🌍 Çok Dilli Portfolio Web Sitesi
+# 🌍 Portfolio Web Sitesi
 
 Bu proje, çok dilli destek, karanlık mod ve kullanıcı tercihlerini kalıcı olarak saklayan modern, responsive ve dinamik bir **portfolio web uygulaması**dır. Proje **React**, **TailwindCSS** ve **React Context API** kullanılarak geliştirilmiştir.
 
