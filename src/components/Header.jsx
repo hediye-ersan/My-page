@@ -52,7 +52,7 @@ const Header = () => {
           <h1 className='text-2xl sm:text-3xl mb-4'>{bioData.title}</h1>
 
           <div className="flex flex-col-reverse sm:flex-row justify-between items-center gap-6">
-            <p className="text-2xl sm:text-[42px] sm:pr-32 leading-relaxed sm:leading-snug">
+            <p className="text-2xl sm:text-3xl sm:pr-32 leading-relaxed sm:leading-snug">
               {bioData.text}
             </p>
 
