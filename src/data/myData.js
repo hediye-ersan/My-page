@@ -117,7 +117,7 @@ const myData = {
                     "text": "View on Github",
                     "button": "Go to app->"
                 },
-                "image": "/images/laptop-img2.png"
+                "image": ""
             }
         },
         "footer": {
@@ -246,7 +246,7 @@ const myData = {
                     "text": "Github'da Görüntüle",
                     "button": "Uygulamaya Git->"
                 },
-                "image": "/images/laptop-img2.png"
+                "image": ""
             }
         },
         "footer": {
