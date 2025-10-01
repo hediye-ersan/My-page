@@ -10,7 +10,7 @@ const myData = {
             "logo2": "/images/LinkedIn.png",
             "darkLogo2": "/images/LinkedIn1.png",
             "intro": `I am currently developing Backend and Frontend Projects. Invite me to join your team ->`,
-            "image": "/images/header-img.png"
+            "image": "/images/header-img3.png"
         },
         "skills": {
             "title": "Skills",
@@ -79,7 +79,8 @@ const myData = {
                     "react": "react",
                     "vercel": "vercel",
                     "axios": "axios",
-                    "router": "router"
+                    "router": "router",
+                    "cypress":"cypress"
                 },
                 "viewGit": {
                     "text": "View on Github",
@@ -254,7 +255,8 @@ const myData = {
                     "react": "react",
                     "vercel": "vercel",
                     "axios": "axios",
-                    "router": "router"
+                    "router": "router",
+                    "cypress":"cypress"
                 },
                 "viewGit": {
                     "text": "Github'da Görüntüle",
