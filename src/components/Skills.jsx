@@ -9,7 +9,7 @@ const Skills = () => {
   return (
     <section className="pt-20 pb-24 dark:bg-dark-bg2 dark:text-dark-text">
       
-      <h2 className=" text-5xl pb-12 ">{skillsData.title}</h2>
+      <h2 className=" text-5xl pb-12 font-bold">{skillsData.title}</h2>
       <div className="sm:flex sm:flex-wrap gap-8 sm:justify-center text-2xl text-center grid grid-cols-2 md:grid-cols-3"> 
         
         {/*map uygulandı*/}
