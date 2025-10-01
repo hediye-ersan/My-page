@@ -104,12 +104,12 @@ const myData = {
                 "image": "/images/laptop-img2.png"
             },
               "thirdProject": {
-                "title": "Task Manager",
-                "text": "In this project, I gained experience in frontend development, component-based design, and state management using React, Redux, and Tailwind CSS. I implemented secure authentication and user management with JWT. On the backend, I developed a RESTful API with Spring Boot and PostgreSQL, gaining experience with CRUD operations and backend integration. Additionally, I created reusable components and maintained a clean code structure to enhance code sustainability.",
+                "title": "ShopCo Website",
+                "text": "I built a modern and responsive e-commerce frontend using React 19 and Vite. I implemented product listing, filtering, and cart flows with Context for state management. I focused on performance optimizations (React.memo, useMemo) and accessibility (aria attributes). Through this project, I learned to balance technical robustness with user experience.",
                 "skills":{
-                    "react":"react",
+                    "react.memo":"react.memo",
                     "redux": "redux",
-                    "axios": "axios",
+                    "useContext": "useContext",
                     "router": "router",
                     "vercel": "vercel"
                 },
@@ -117,7 +117,7 @@ const myData = {
                     "text": "View on Github",
                     "button": "Go to app->"
                 },
-                "image": ""
+                "image": "/images/laptop-img1.png"
             }
         },
         "footer": {
@@ -133,7 +133,7 @@ const myData = {
     "tr": {
         "bio": {
             "title": "Merhaba! 👋",
-            "text": "Ben Hediye, Full Stack Developer olarak hem frontend hem bavkend geliştirme konusunda deneyim sahibiyim. Ayrıca veri tabanı yönetimi(PostgreSQL) ve veri odaklı çözümler geliştirme konularında da bilgi sahibiyim. Öğrenmeye açık yapım, problem çözme becerilerim ve farklı teknolojileri araştırarak proje geliştirme tutkum ile kendimi sürekli geliştirmeyi hedefliyorum. Portfolyomda gerçekleştirdiğim projeleri inceleyebilir, benimle iletişime geçebilirsiniz.",
+            "text": "Ben Hediye, Full Stack Developer olarak hem frontend hem backend geliştirme konusunda deneyim sahibiyim. Ayrıca veri tabanı yönetimi(PostgreSQL) ve veri odaklı çözümler geliştirme konularında da bilgi sahibiyim. Öğrenmeye açık yapım, problem çözme becerilerim ve farklı teknolojileri araştırarak proje geliştirme tutkum ile kendimi sürekli geliştirmeyi hedefliyorum. Portfolyomda gerçekleştirdiğim projeleri inceleyebilir, benimle iletişime geçebilirsiniz.",
             "logo1": "/images/github.png",
             "darkLogo1": "/images/github1.png",
             "logo2": "/images/LinkedIn.png",
@@ -233,20 +233,20 @@ const myData = {
                 "image": "/images/laptop-img2.png"
             },
              "thirdProject": {
-                "title": "Görev Yöneticisi Uygulaması",
-                "text": "Bu projede React, Redux ve Tailwind CSS kullanarak frontend geliştirme, komponent tabanlı tasarım ve state yönetimi konusunda deneyim kazandım. JWT tabanlı kimlik doğrulama ve kullanıcı yönetimi ile güvenli oturum yönetimi uyguladım. Spring Boot ve PostgreSQL ile RESTful API geliştirdim, CRUD işlemleri ve backend entegrasyonu konusunda tecrübe edindim. Ayrıca yeniden kullanılabilir komponentler ve temiz kod yapısı oluşturarak kod sürdürülebilirliğini geliştirdim.",
+                "title": "ShopCo Website",
+                "text": "React 19 ve Vite ile modern ve responsive bir e-ticaret arayüzü geliştirdim. Ürün listeleme, filtreleme ve sepet akışlarını Context ile yönettim. Performans optimizasyonları (React.memo, useMemo) ve erişilebilirlik (aria özellikleri) üzerine çalıştım. Bu projede hem teknik sağlamlık hem de kullanıcı deneyimine odaklanmayı öğrendim.",
                 "skills":{
-                    "react":"react",
-                    "jwt": "jwt",
-                    "spring boot": "spring boot",
-                    "restful api": "restful api",
-                    "postgreSQL": "postgreSQL",
+                    "react.memo":"react.memo",
+                    "redux": "redux",
+                    "useContext": "useContext",
+                    "router": "router",
+                    "vercel": "vercel"
                 },
                 "viewGit": {
                     "text": "Github'da Görüntüle",
                     "button": "Uygulamaya Git->"
                 },
-                "image": ""
+                "image": "/images/laptop-img3.png"
             }
         },
         "footer": {
