@@ -125,6 +125,41 @@ const myData = {
                 "image": "/images/laptop-img3.png"
             }
         },
+        "certificates": {
+            "title": "Certificates",
+            "items": [
+                {
+                    "image": "/images/certificate-fullstack.png",
+                    "description": "Workintech Full Stack Bootcamp",
+                    "date": "04.2025"
+                },
+                {
+                    "image": "/images/certificate-frontend.png",
+                    "description": "Workintech Frontend Bootcamp",
+                    "date": "04.2025"
+                },
+                {
+                    "image": "/images/certificate-projey.png",
+                    "description": "Sca Social Project Management",
+                    "date": "09.2025"
+                },
+                {
+                    "image": "/images/certificate-sql.png",
+                    "description": "MsSQL Database Fundamentals",
+                    "date": "10.2023"
+                },
+                {
+                    "image": "/images/certificate-metodoloji.png",
+                    "description": "International Business Analysis Methodology",
+                    "date": "01.2023"
+                },
+                {
+                    "image": "/images/certificate-codemaster.png",
+                    "description": "TalentCoders",
+                    "date": "04.2024"
+                }
+            ]
+        },
         "footer": {
             "text": "Let's work together on your next product.",
             "social": {
@@ -264,6 +299,41 @@ const myData = {
                 },
                 "image": "/images/laptop-img3.png"
             }
+        },
+        "certificates": {
+            "title": "Sertifikalarım",
+            "items": [
+                {
+                    "image": "/images/certificate-fullstack.png",
+                    "description": "Workintech Full Stack Bootcamp",
+                    "date": "04.2025"
+                },
+                {
+                    "image": "/images/certificate-frontend.png",
+                    "description": "Workintech Frontend Bootcamp",
+                    "date": "04.2025"
+                },
+                {
+                    "image": "/images/certificate-projey.png",
+                    "description": "Sca Social Proje Yönetimi",
+                    "date": "09.2025"
+                },
+                {
+                    "image": "/images/certificate-sql.png",
+                    "description": "MsSQL Veritabanı Temelleri",
+                    "date": "10.2023"
+                },
+                {
+                    "image": "/images/certificate-metodoloji.png",
+                    "description": "Uluslararası İş Analizi Metodolojisi",
+                    "date": "01.2023"
+                },
+                {
+                    "image": "/images/certificate-codemaster.png",
+                    "description": "TalentCoders",
+                    "date": "04.2024"
+                }
+            ]
         },
         "footer": {
             "text": "Gelecek ürününüz üzerinde birlikte çalışalım.",
