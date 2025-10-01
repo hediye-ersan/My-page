@@ -9,7 +9,7 @@ const myData = {
             "darkLogo1": "/images/github1.png",
             "logo2": "/images/LinkedIn.png",
             "darkLogo2": "/images/LinkedIn1.png",
-            "intro": `Currently Freelancing for UX, UI & Web Design Project. Invite me to join your team ->`,
+            "intro": `I am currently developing Backend and Frontend Projects. Invite me to join your team ->`,
             "image": "/images/header-img.png"
         },
         "skills": {
@@ -112,7 +112,6 @@ const myData = {
                 "text": "I built a modern and responsive e-commerce frontend using React 19 and Vite. I implemented product listing, filtering, and cart flows with Context for state management. I focused on performance optimizations (React.memo, useMemo) and accessibility (aria attributes). Through this project, I learned to balance technical robustness with user experience.",
                 "skills": {
                     "react.memo": "react.memo",
-                    "redux": "redux",
                     "useContext": "useContext",
                     "router": "router",
                     "vercel": "vercel"
@@ -130,9 +129,15 @@ const myData = {
             "text": "Let's work together on your next product.",
             "social": {
                 "github": "Github",
+                "link": "https://github.com/hediye-ersan",
                 "blog": "Personal Blog",
                 "linkedin": "Linkedin",
                 "email": "Email"
+            },
+            "links": {
+                "github": "https://github.com/hediye-ersan",
+                "linkedin": "https://www.linkedin.com/in/hediye-ersan-b2799325a/",
+                "email": "hediyesnl9@gmail.com"
             }
         }
     },
@@ -144,8 +149,8 @@ const myData = {
             "darkLogo1": "/images/github1.png",
             "logo2": "/images/LinkedIn.png",
             "darkLogo2": "/images/LinkedIn1.png",
-            "intro": "Şu anda UX, UI ve Web Tasarım Projeleri için Freelance çalışıyorum. Ekibinize katılmam için beni davet edin -> ",
-            "image": "/images/header-img.png"
+            "intro": "Şu anda Backend, Frontend Projeleri geliştiriyorum. Ekibinize katılmam için beni davet edin -> ",
+            "image": "/images/header-img3.png"
         },
         "skills": {
             "title": "Yetenekler",
@@ -195,7 +200,7 @@ const myData = {
                 "birthday": "23.10.1999",
                 "city": "İstanbul/Sancaktepe",
                 "education": "Sakarya Uni. Matematik, Lisans, 2024",
-                "preferredRole": "Full Stack, UX, UI, Ön Uç Geliştirme, Arka Uç Geliştirme, Web Tasarım, İş Analisti, Veri Analisti"
+                "preferredRole": "Full Stack, UX, UI, Frontend Geliştirme, Backend Geliştirme, Web Tasarım, İş Analisti, Veri Analisti"
             },
             "aboutMe": {
                 "title": "Hakkımda",
@@ -247,7 +252,6 @@ const myData = {
                 "text": "React 19 ve Vite ile modern ve responsive bir e-ticaret arayüzü geliştirdim. Ürün listeleme, filtreleme ve sepet akışlarını Context ile yönettim. Performans optimizasyonları (React.memo, useMemo) ve erişilebilirlik (aria özellikleri) üzerine çalıştım. Bu projede hem teknik sağlamlık hem de kullanıcı deneyimine odaklanmayı öğrendim.",
                 "skills": {
                     "react.memo": "react.memo",
-                    "redux": "redux",
                     "useContext": "useContext",
                     "router": "router",
                     "vercel": "vercel"
@@ -265,9 +269,15 @@ const myData = {
             "text": "Gelecek ürününüz üzerinde birlikte çalışalım.",
             "social": {
                 "github": "Github",
+                "link": "https://github.com/hediye-ersan",
                 "blog": "Kişisel Blog",
                 "linkedin": "Linkedin",
                 "email": "Email"
+            },
+            "links": {
+                "github": "https://github.com/hediye-ersan",
+                "linkedin": "https://www.linkedin.com/in/hediye-ersan-b2799325a/",
+                "email": "hediyesnl9@gmail.com"
             }
         }
     }
