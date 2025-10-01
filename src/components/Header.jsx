@@ -9,7 +9,7 @@ const Header = () => {
   const bioData = currentLangContent.bio;
 
 
-  const email = "hediye@example.com";
+  const email = "hediyesnl9@gmail.com";
   //html içerik render etmek
   const pinkIntro = bioData.intro
     .replace(/(Freelancing|UX|UI|Web Design|Web Tasarım|Freelance)/g, (match) => {
@@ -52,7 +52,7 @@ const Header = () => {
           <h1 className='text-2xl sm:text-3xl mb-4'>{bioData.title}</h1>
 
           <div className="flex flex-col-reverse sm:flex-row justify-between items-center gap-6">
-            <p className="text-2xl sm:text-3xl sm:pr-32 leading-relaxed sm:leading-snug">
+            <p className="text-xl sm:text-2xl sm:pr-30 leading-relaxed sm:leading-snug text-justify">
               {bioData.text}
             </p>
 
@@ -61,7 +61,7 @@ const Header = () => {
         </div>
 
         <article className='text-base sm:text-lg pt-6 sm:pt-0'>
-          <figure className='flex gap-6 justify-center sm:justify-start flex-wrap mt-6 sm:mt-0 pt-6'>
+          <figure className='flex gap-6 justify-center sm:justify-start flex-wrap mt-6 sm:mt-0'>
 
             {/* Github Icon */}
             <img src={bioData.logo1} alt="Github" className="dark:hidden w-8 h-8" />
