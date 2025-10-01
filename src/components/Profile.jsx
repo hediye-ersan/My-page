@@ -10,7 +10,7 @@ const Profile = () => {
 
   return (
     <section className="bg-[#F4F4F4] dark:bg-dark-bg1 dark:text-dark-text px-4 sm:px-0">
-      <h2 className="text-3xl sm:text-4xl pt-16 sm:pt-20 text-center">{profileData.title}</h2>
+      <h2 className="text-3xl sm:text-4xl pt-16 font-bold sm:pt-20 text-center">{profileData.title}</h2>
   
       <div className="flex flex-col sm:flex-row justify-center gap-10 sm:gap-16 px-4 sm:px-32">
         {/* Basic Information */}
