@@ -39,7 +39,7 @@ const Header = () => {
   };
 
   return (
-    <section className="sm:text-left text-center px-4 sm:px-36 py-20 z-10 dark:bg-dark-bg1 dark:text-dark-text">
+    <section className="sm:text-left text-center px-4 sm:px-36 py-20 z-10 dark:bg-dark-bg1 dark:text-dark-text ">
 
       {/* Dark Mode & Language Toggle */}
       <div className='flex justify-center sm:justify-end gap-4 sm:gap-8 pb-8 sm:pb-0'>
@@ -61,7 +61,7 @@ const Header = () => {
         </div>
 
         <article className='text-base sm:text-lg pt-6 sm:pt-0'>
-          <figure className='flex gap-6 justify-center sm:justify-start flex-wrap mt-6 sm:mt-0'>
+          <figure className='flex gap-6 justify-center sm:justify-start flex-wrap mt-6 sm:mt-0 pt-6'>
 
             {/* Github Icon */}
             <img src={bioData.logo1} alt="Github" className="dark:hidden w-8 h-8" />
