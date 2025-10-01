@@ -75,23 +75,25 @@ const myData = {
             "firstProject": {
                 "title": "Pizza Purchase Page",
                 "text": "I developed a dynamic web application using React and React Router. During this process, I gained experience in form management, validation, and API integration with Axios. In addition, by writing tests with Cypress, I strengthened my technical skills and reinforced my test-driven development approach.",
-                "skills":{
-                    "react":"react",
+                "skills": {
+                    "react": "react",
                     "vercel": "vercel",
                     "axios": "axios",
                     "router": "router"
                 },
                 "viewGit": {
                     "text": "View on Github",
-                    "button": "Go to app->"
+                    "button": "Go to app->",
+                    "link": "https://github.com/hediye-ersan/My-Pizza-Page",
+                    "buttonLink": "https://s8-proje-pizza.vercel.app/"
                 },
                 "image": "/images/laptop-img1.png"
             },
             "secondProject": {
                 "title": "E-commerce App",
                 "text": "In this project, I developed a dynamic full-stack e-commerce application using React and Redux. I gained experience in API integration, user management, and security. Additionally, I designed a modern, user-friendly interface with Tailwind CSS and created reusable components, which helped me improve both my design skills and code sustainability.",
-                "skills":{
-                    "react":"react",
+                "skills": {
+                    "react": "react",
                     "redux": "redux",
                     "axios": "axios",
                     "router": "router",
@@ -99,15 +101,17 @@ const myData = {
                 },
                 "viewGit": {
                     "text": "View on Github",
-                    "button": "Go to app->"
+                    "button": "Go to app->",
+                    "link": "https://github.com/hediye-ersan/Trend-Kod",
+                    "buttonLink": "https://trend-kod.vercel.app/"
                 },
                 "image": "/images/laptop-img2.png"
             },
-              "thirdProject": {
+            "thirdProject": {
                 "title": "ShopCo Website",
                 "text": "I built a modern and responsive e-commerce frontend using React 19 and Vite. I implemented product listing, filtering, and cart flows with Context for state management. I focused on performance optimizations (React.memo, useMemo) and accessibility (aria attributes). Through this project, I learned to balance technical robustness with user experience.",
-                "skills":{
-                    "react.memo":"react.memo",
+                "skills": {
+                    "react.memo": "react.memo",
                     "redux": "redux",
                     "useContext": "useContext",
                     "router": "router",
@@ -115,9 +119,11 @@ const myData = {
                 },
                 "viewGit": {
                     "text": "View on Github",
-                    "button": "Go to app->"
+                    "button": "Go to app->",
+                    "link": "https://github.com/hediye-ersan/E-commerce",
+                    "buttonLink": "https://e-commerce-drab-six-ds21nudubw.vercel.app/"
                 },
-                "image": "/images/laptop-img1.png"
+                "image": "/images/laptop-img3.png"
             }
         },
         "footer": {
@@ -144,7 +150,7 @@ const myData = {
         "skills": {
             "title": "Yetenekler",
             "skill": [
-                 {
+                {
                     "name": "JavaScript",
                     "image": "/images/js-logo.png"
                 },
@@ -204,23 +210,25 @@ const myData = {
             "firstProject": {
                 "title": "Pizza Satın Alma Sayfası",
                 "text": "React ve React Router kullanarak dinamik bir web uygulaması geliştirdim. Bu süreçte form yönetimi, doğrulama ve Axios ile API entegrasyonu konularında deneyim kazandım. Ayrıca Cypress ile testler yazarak test odaklı geliştirme yaklaşımımı pekiştirdim ve teknik becerilerimi güçlendirdim.",
-                "skills":{
-                    "react":"react",
+                "skills": {
+                    "react": "react",
                     "vercel": "vercel",
                     "axios": "axios",
                     "router": "router"
                 },
                 "viewGit": {
                     "text": "Github'da Görüntüle",
-                    "button": "Uygulamaya Git->"
+                    "button": "Uygulamaya Git->",
+                    "link": "https://github.com/hediye-ersan/My-Pizza-Page",
+                    "buttonLink": "https://s8-proje-pizza.vercel.app/"
                 },
                 "image": "/images/laptop-img1.png"
             },
             "secondProject": {
                 "title": "E-ticaret Uygulaması",
                 "text": "Bu projede React ve Redux kullanarak dinamik bir full-stack e-ticaret uygulaması geliştirdim. API entegrasyonu, kullanıcı yönetimi ve güvenlik konularında deneyim kazandım. Ayrıca Tailwind CSS ile modern ve kullanıcı dostu bir arayüz tasarladım, yeniden kullanılabilir bileşenler oluşturarak hem görsel tasarım becerilerimi hem de kod sürdürülebilirliğini geliştirdim.",
-                "skills":{
-                    "react":"react",
+                "skills": {
+                    "react": "react",
                     "redux": "redux",
                     "axios": "axios",
                     "router": "router",
@@ -228,15 +236,17 @@ const myData = {
                 },
                 "viewGit": {
                     "text": "Github'da Görüntüle",
-                    "button": "Uygulamaya Git->"
+                    "button": "Uygulamaya Git->",
+                    "link": "https://github.com/hediye-ersan/Trend-Kod",
+                    "buttonLink": "https://trend-kod.vercel.app/"
                 },
                 "image": "/images/laptop-img2.png"
             },
-             "thirdProject": {
+            "thirdProject": {
                 "title": "ShopCo Website",
                 "text": "React 19 ve Vite ile modern ve responsive bir e-ticaret arayüzü geliştirdim. Ürün listeleme, filtreleme ve sepet akışlarını Context ile yönettim. Performans optimizasyonları (React.memo, useMemo) ve erişilebilirlik (aria özellikleri) üzerine çalıştım. Bu projede hem teknik sağlamlık hem de kullanıcı deneyimine odaklanmayı öğrendim.",
-                "skills":{
-                    "react.memo":"react.memo",
+                "skills": {
+                    "react.memo": "react.memo",
                     "redux": "redux",
                     "useContext": "useContext",
                     "router": "router",
@@ -244,7 +254,9 @@ const myData = {
                 },
                 "viewGit": {
                     "text": "Github'da Görüntüle",
-                    "button": "Uygulamaya Git->"
+                    "button": "Uygulamaya Git->",
+                    "link": "https://github.com/hediye-ersan/E-commerce",
+                    "buttonLink": "https://e-commerce-drab-six-ds21nudubw.vercel.app/"
                 },
                 "image": "/images/laptop-img3.png"
             }
