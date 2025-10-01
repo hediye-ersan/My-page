@@ -48,7 +48,7 @@ const Projects = () => {
         </h3>
 
         {/* Proje açıklaması */}
-        <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed text-xs lg:text-sm line-clamp-3">
+        <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed text-xs lg:text-sm">
           {project.text}
         </p>
 
@@ -91,13 +91,14 @@ const Projects = () => {
 
         {/* Proje görseli */}
         {project.image && (
-          <div className="relative group mt-2">
-            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
-            <img 
-              src={project.image} 
-              alt={project.title} 
-              className="w-full h-64 lg:h-80 object-contain rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300 bg-white/50 dark:bg-gray-800/50 p-2" 
-            />
+          <div className="mt-4 -mx-6 lg:-mx-8">
+            <div className="flex w-full items-center justify-center">
+              <img 
+                src={project.image} 
+                alt={project.title} 
+                className="w-full h-auto object-cover shadow-lg transition-all duration-300" 
+              /> 
+            </div>
           </div>
         )}
       </div>
