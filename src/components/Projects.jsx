@@ -30,7 +30,7 @@ const Projects = () => {
   const ProjectCard = ({ project, index, isActive, onClick }) => (
     <div
       className={`
-        group relative overflow-hidden rounded-3xl border-2 transition-all duration-500 cursor-pointer
+        group relative overflow-hidden rounded-3xl border-2 transition-all duration-500 cursor-pointer h-full
         ${isActive 
           ? 'border-blue-300 dark:border-blue-600 shadow-2xl scale-105' 
           : 'border-gray-200 dark:border-gray-700 hover:border-blue-200 dark:hover:border-blue-500 hover:shadow-xl hover:scale-102'
@@ -41,7 +41,7 @@ const Projects = () => {
     >
       <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent dark:from-black/20"></div>
       
-      <div className="relative p-6 lg:p-8">
+      <div className="relative p-6 lg:p-8 flex flex-col h-full">
         {/* Proje başlığı */}
         <h3 className="text-xl lg:text-2xl font-bold font-playfair mb-3 text-gray-800 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
           {project.title}
@@ -68,7 +68,7 @@ const Projects = () => {
         </div>
 
         {/* Linkler */}
-        <div className="flex flex-col sm:flex-row gap-3 mb-4">
+        <div className="flex flex-col sm:flex-row gap-3 mb-4 justify-between">
           <a 
             href={project.viewGit.link || '#'} 
             className="inline-flex items-center px-3 py-1.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-blue-400 dark:hover:border-blue-500 transition-all duration-300 font-medium text-xs"
@@ -91,7 +91,7 @@ const Projects = () => {
 
         {/* Proje görseli */}
         {project.image && (
-          <div className="mt-4 -mx-6 lg:-mx-8">
+          <div className="mt-auto -mx-6 lg:-mx-8">
             <div className="flex w-full items-center justify-center">
               <img 
                 src={project.image} 
@@ -108,7 +108,7 @@ const Projects = () => {
   return (
     <section className="py-20 px-6 sm:px-12 lg:px-24 xl:px-36 dark:bg-dark-bg2 dark:text-dark-text">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl lg:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+        <h2 className="text-4xl lg:text-5xl font-bold text-center mb-16 text-black dark:text-white">
           {projectsData.title}
         </h2>
 
