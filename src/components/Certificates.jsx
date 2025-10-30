@@ -88,7 +88,7 @@ const Certificates = () => {
         </div>
       </div>
 
-      {/* Desktop: carousel with 3 per page */}
+      {/* Desktop: carousel with 3 per page + Lottie animation on the right */}
       <div className="hidden lg:block mt-10 px-4 sm:px-32">
         {/* Dots */}
         <div className="flex justify-center mb-8 space-x-2">
@@ -101,60 +101,63 @@ const Certificates = () => {
           ))}
         </div>
 
-        {/* Carousel viewport */}
-        <div className="relative overflow-hidden rounded-3xl">
-          <div
-            className="flex transition-transform duration-500 ease-in-out"
-            style={{ transform: `translateX(-${activePage * 100}%)` }}
-          >
-            {Array.from({ length: totalPages }).map((_, pageIdx) => {
-              const start = pageIdx * itemsPerPage;
-              const slice = items.slice(start, start + itemsPerPage);
-              return (
-                <div key={pageIdx} className="w-full flex-shrink-0">
-                  <div className="grid grid-cols-3 gap-8">
-                    {slice.map((cert, idx) => (
-                      <article key={`${pageIdx}-${idx}`} className="bg-white dark:bg-[#525252] rounded-xl p-6 flex flex-col">
-                        <div className="flex w-full items-center justify-center rounded-lg overflow-hidden bg-white dark:bg-gray-700">
-                          <img
-                            src={cert.image}
-                            alt={cert.description}
-                            className="w-full h-auto object-contain cursor-zoom-in"
-                            onClick={() => openLightbox(cert.image, cert.description)}
-                          />
-                        </div>
-                        <div className="mt-4">
-                          <p className="text-lg">{cert.description}</p>
-                          <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">{cert.date}</p>
-                        </div>
-                      </article>
-                    ))}
-                    {slice.length < itemsPerPage && Array.from({ length: itemsPerPage - slice.length }).map((_, fillerIdx) => (
-                      <div key={`filler-${pageIdx}-${fillerIdx}`} />
-                    ))}
+        {/* Layout: Certificates on left, Lottie on right */}
+        <div className="flex gap-8 items-start">
+          {/* Carousel viewport */}
+          <div className="flex-1 relative overflow-hidden rounded-3xl">
+            <div
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${activePage * 100}%)` }}
+            >
+              {Array.from({ length: totalPages }).map((_, pageIdx) => {
+                const start = pageIdx * itemsPerPage;
+                const slice = items.slice(start, start + itemsPerPage);
+                return (
+                  <div key={pageIdx} className="w-full flex-shrink-0">
+                    <div className="grid grid-cols-3 gap-8">
+                      {slice.map((cert, idx) => (
+                        <article key={`${pageIdx}-${idx}`} className="bg-white dark:bg-[#525252] rounded-xl p-6 flex flex-col">
+                          <div className="flex w-full items-center justify-center rounded-lg overflow-hidden bg-white dark:bg-gray-700">
+                            <img
+                              src={cert.image}
+                              alt={cert.description}
+                              className="w-full h-auto object-contain cursor-zoom-in"
+                              onClick={() => openLightbox(cert.image, cert.description)}
+                            />
+                          </div>
+                          <div className="mt-4">
+                            <p className="text-lg">{cert.description}</p>
+                            <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">{cert.date}</p>
+                          </div>
+                        </article>
+                      ))}
+                      {slice.length < itemsPerPage && Array.from({ length: itemsPerPage - slice.length }).map((_, fillerIdx) => (
+                        <div key={`filler-${pageIdx}-${fillerIdx}`} />
+                      ))}
+                    </div>
                   </div>
-                </div>
-              );
-            })}
-          </div>
+                );
+              })}
+            </div>
 
-          {/* Arrows - vertically centered alongside the carousel */}
-          <button
-            onClick={() => setActivePage(activePage > 0 ? activePage - 1 : totalPages - 1)}
-            className="hidden lg:flex items-center justify-center absolute top-1/2 -translate-y-1/2 left-2 p-3 bg-white/90 dark:bg-gray-800/90 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-blue-400 z-10"
-          >
-            <svg className="w-6 h-6 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-          <button
-            onClick={() => setActivePage(activePage < totalPages - 1 ? activePage + 1 : 0)}
-            className="hidden lg:flex items-center justify-center absolute top-1/2 -translate-y-1/2 right-2 p-3 bg-white/90 dark:bg-gray-800/90 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-blue-400 z-10"
-          >
-            <svg className="w-6 h-6 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
+            {/* Arrows - vertically centered alongside the carousel */}
+            <button
+              onClick={() => setActivePage(activePage > 0 ? activePage - 1 : totalPages - 1)}
+              className="hidden lg:flex items-center justify-center absolute top-1/2 -translate-y-1/2 left-2 p-3 bg-white/90 dark:bg-gray-800/90 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-blue-400 z-10"
+            >
+              <svg className="w-6 h-6 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <button
+              onClick={() => setActivePage(activePage < totalPages - 1 ? activePage + 1 : 0)}
+              className="hidden lg:flex items-center justify-center absolute top-1/2 -translate-y-1/2 right-2 p-3 bg-white/90 dark:bg-gray-800/90 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-blue-400 z-10"
+            >
+              <svg className="w-6 h-6 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
 
