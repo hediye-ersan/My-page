@@ -3,7 +3,7 @@
 const myData = {
     "en": {
         "bio": {
-            "title": "Hi! 👋",
+            "title": "Hi! 👋🏻",
             "text": "I am Hediye, a Full Stack Developer with experience in both frontend and backend development. I also have knowledge in database management (PostgreSQL) and developing data-driven solutions. With my open-minded approach to learning, problem-solving skills, and passion for researching different technologies to develop projects, I aim to continuously improve myself. You can review the projects I have completed in my portfolio and contact me.",
             "logo1": "/images/github.png",
             "darkLogo1": "/images/github1.png",
@@ -179,7 +179,7 @@ const myData = {
     },
     "tr": {
         "bio": {
-            "title": "Merhaba! 👋",
+            "title": "Merhaba! 👋🏻",
             "text": "Ben Hediye, Full Stack Developer olarak hem frontend hem backend geliştirme konusunda deneyim sahibiyim. Ayrıca veri tabanı yönetimi(PostgreSQL) ve veri odaklı çözümler geliştirme konularında da bilgi sahibiyim. Öğrenmeye açık yapım, problem çözme becerilerim ve farklı teknolojileri araştırarak proje geliştirme tutkum ile kendimi sürekli geliştirmeyi hedefliyorum. Portfolyomda gerçekleştirdiğim projeleri inceleyebilir, benimle iletişime geçebilirsiniz.",
             "logo1": "/images/github.png",
             "darkLogo1": "/images/github1.png",
