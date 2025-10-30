@@ -1,5 +1,7 @@
 import React from 'react';
+import Lottie from 'lottie-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import webDevAnimationData from '../assets/lottie/Web Development.json';
 
 
 const Profile = () => {
@@ -32,6 +34,18 @@ const Profile = () => {
               <p key={index}>{paragraph}</p>
             ))}
           </div>
+        </div>
+      </div>
+
+      {/* Web Development Lottie Animation */}
+      <div className="flex justify-center items-center pb-2 px-4">
+        <div className="w-full max-w-2xl sm:max-w-3xl md:max-w-4xl">
+          <Lottie 
+            animationData={webDevAnimationData}
+            loop={true}
+            autoplay={true}
+            style={{ width: '100%', height: 'auto', maxHeight: '450px' }}
+          />
         </div>
       </div>
     </section>
