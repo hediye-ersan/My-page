@@ -1,8 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Lottie from 'lottie-react';
 import "../reset.css"
 import { useLanguage } from '../contexts/LanguageContext';
 import DarkModeToggle from './DarkModeToggle';
+import contactAnimationData from '../assets/lottie/Contact Title.json';
 
 const Header = () => {
 
@@ -100,7 +102,17 @@ const Header = () => {
         </div>
 
         <article className='text-base sm:text-lg pt-6 sm:pt-0'>
-          <figure className='flex gap-6 justify-center sm:justify-start flex-wrap mt-6 sm:mt-0'>
+          <figure className='flex gap-6 justify-center sm:justify-start flex-wrap items-center mt-6 sm:mt-0'>
+            
+            {/* Contact Title Lottie Animation */}
+            <div className="w-24 sm:w-32 flex-shrink-0">
+              <Lottie 
+                animationData={contactAnimationData}
+                loop={true}
+                autoplay={true}
+                style={{ width: '100%', height: 'auto' }}
+              />
+            </div>
 
             {/* Github Icon */}
             <img src={bioData.logo1} alt="Github" className="dark:hidden w-8 h-8" />
