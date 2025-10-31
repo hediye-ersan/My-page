@@ -97,7 +97,23 @@ const Header = () => {
               {bioData.text}
             </p>
 
-            <img src={bioData.image} alt="Profile" className="w-40 sm:w-auto" />
+            <motion.img 
+              src={bioData.image} 
+              alt="Profile" 
+              className="w-40 sm:w-auto"
+              initial={{ opacity: 0, scale: 0.8, y: 30 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ 
+                duration: 0.8, 
+                ease: [0.2, 0.7, 0.2, 1],
+                delay: 0.3
+              }}
+              whileHover={{ 
+                scale: 1.05,
+                rotate: [0, -2, 2, -2, 0],
+                transition: { duration: 0.5 }
+              }}
+            />
           </div>
         </div>
 
