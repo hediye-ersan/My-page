@@ -27,8 +27,8 @@ const Certificates = () => {
   }, [lightbox.open]);
 
   return (
-    <section className="bg-[#F4F4F4] dark:bg-dark-bg1 dark:text-dark-text px-4 sm:px-0 py-16">
-      <h2 className="text-3xl sm:text-4xl text-center font-playfair">{certData.title}</h2>
+    <section className="bg-[#F4F4F4] dark:bg-dark-bg1 dark:text-dark-text px-4 sm:px-0 pt-16 pb-6">
+      <h2 className="text-4xl lg:text-5xl font-bold text-center font-playfair">{certData.title}</h2>
 
       {/* Mobile/Tablet: 1-per-view carousel */}
       <div className="lg:hidden mt-10 px-4 sm:px-10">

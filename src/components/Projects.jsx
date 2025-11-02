@@ -156,7 +156,7 @@ const Projects = () => {
   );
 
   return (
-    <section className="py-20 px-6 sm:px-12 lg:px-24 xl:px-36 dark:bg-dark-bg2 dark:text-dark-text">
+    <section className="pt-20 pb-20 px-6 sm:px-12 lg:px-24 xl:px-36 dark:bg-dark-bg2 dark:text-dark-text">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl lg:text-5xl font-bold text-center mb-16 text-black dark:text-white">
           {projectsData.title}
