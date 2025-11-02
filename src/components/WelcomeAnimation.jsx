@@ -3,8 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Lottie from 'lottie-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
-// Mevcut Lottie animasyonlarından birini kullanalım
-import welcomeAnimationData from '../assets/lottie/Creative 3D Visual Animation - Website Development.json';
+// Hello World Lottie animasyonu
+import welcomeAnimationData from '../assets/lottie/Hello World.json';
 
 const WelcomeAnimation = () => {
   const [showWelcome, setShowWelcome] = useState(false);
@@ -24,7 +24,7 @@ const WelcomeAnimation = () => {
       setTimeout(() => {
         setShowWelcome(false);
       }, 500); // fade-out süresi
-    }, 3000);
+    }, 5000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -67,7 +67,7 @@ const WelcomeAnimation = () => {
             }}
           >
             {/* Lottie Animation */}
-            <div className="w-80 sm:w-96 md:w-[28rem] lg:w-[32rem] mb-4">
+            <div className="w-96 sm:w-[28rem] md:w-[32rem] lg:w-[36rem] xl:w-[40rem]">
               <Lottie 
                 animationData={welcomeAnimationData}
                 loop={false}
@@ -75,22 +75,6 @@ const WelcomeAnimation = () => {
                 style={{ width: '100%', height: 'auto' }}
               />
             </div>
-
-            {/* Welcome Text */}
-            <motion.div
-              className="text-center"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0 }}
-              transition={{ delay: 0.2, duration: 0.4, ease: "easeOut" }}
-            >
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 drop-shadow-lg">
-                {bioData.title}
-              </h2>
-              <p className="text-base sm:text-lg md:text-xl text-gray-200 px-4 max-w-md drop-shadow-md">
-                Portfolio'ma Hoş Geldiniz
-              </p>
-            </motion.div>
           </motion.div>
         </motion.div>
       )}
