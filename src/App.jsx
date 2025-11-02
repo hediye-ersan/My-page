@@ -2,6 +2,7 @@ import React from 'react';
 
 import LanguageProvider from './contexts/LanguageContext';
 import './reset.css'
+import WelcomeAnimation from './components/WelcomeAnimation';
 import Header from './components/Header';
 import Skills from './components/Skills';
 import Profile from './components/Profile';
@@ -15,7 +16,7 @@ function App() {
   return (
 
     <LanguageProvider>
-      
+      <WelcomeAnimation />
         <div className='font-inter'>
           <Header />
           <Skills />
