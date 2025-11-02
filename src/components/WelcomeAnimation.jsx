@@ -3,8 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Lottie from 'lottie-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
-// Hello World Lottie animasyonu
-import welcomeAnimationData from '../assets/lottie/Hello World.json';
+// Indicius Sticker HelloWorld Lottie animasyonu
+import welcomeAnimationData from '../assets/lottie/Indicius Sticker HelloWorld.json';
 
 const WelcomeAnimation = () => {
   const [showWelcome, setShowWelcome] = useState(false);
@@ -24,7 +24,7 @@ const WelcomeAnimation = () => {
       setTimeout(() => {
         setShowWelcome(false);
       }, 500); // fade-out süresi
-    }, 5000);
+    }, 4000);
 
     return () => clearTimeout(timer);
   }, []);

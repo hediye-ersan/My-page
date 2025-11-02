@@ -53,7 +53,7 @@ const Header = () => {
 
       <header>
         <div>
-          <h1 className='text-2xl sm:text-3xl mb-4'>
+          <h1 className='text-2xl sm:text-3xl mb-4 sm:mb-0'>
             {(() => {
               // Emoji'yi bulmak için - tüm varyasyonları kontrol et
               const emojiPattern = /👋(🏻|🏼|🏽|🏾|🏿)?/;
