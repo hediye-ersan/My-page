@@ -122,7 +122,7 @@ const Header = () => {
           <figure className='flex gap-6 justify-center sm:justify-start flex-wrap items-center mt-6 sm:mt-0'>
             
             {/* Contact Title Lottie Animation */}
-            <div className="w-24 sm:w-32 flex-shrink-0">
+            <div className="w-24 sm:w-32 flex-shrink-0 pr-4">
               <Lottie 
                 animationData={contactAnimationData}
                 loop={true}
