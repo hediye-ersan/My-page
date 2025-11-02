@@ -10,6 +10,7 @@ const Header = () => {
 
   const { currentLangContent } = useLanguage();
   const bioData = currentLangContent.bio;
+  const footerData = currentLangContent.footer;
 
 
   const email = "hediyesnl9@gmail.com";
@@ -131,12 +132,20 @@ const Header = () => {
             </div>
 
             {/* Github Icon */}
-            <img src={bioData.logo1} alt="Github" className="dark:hidden w-8 h-8" />
-            <img src={bioData.darkLogo1} alt="Github" className="hidden dark:block w-8 h-8" />
+            <a href={footerData.links.github} target="_blank" rel="noreferrer">
+              <img src={bioData.logo1} alt="Github" className="dark:hidden w-8 h-8" />
+            </a>
+            <a href={footerData.links.github} target="_blank" rel="noreferrer">
+              <img src={bioData.darkLogo1} alt="Github" className="hidden dark:block w-8 h-8" />
+            </a>
 
             {/* Linkedin Icon */}
-            <img src={bioData.logo2} alt="Linkedin" className="dark:hidden w-8 h-8" />
-            <img src={bioData.darkLogo2} alt="Linkedin" className="hidden dark:block w-8 h-8" />
+            <a href={footerData.links.linkedin} target="_blank" rel="noreferrer">
+              <img src={bioData.logo2} alt="Linkedin" className="dark:hidden w-8 h-8" />
+            </a>
+            <a href={footerData.links.linkedin} target="_blank" rel="noreferrer">
+              <img src={bioData.darkLogo2} alt="Linkedin" className="hidden dark:block w-8 h-8" />
+            </a>
           </figure>
 
           <p className='pt-6 sm:pt-8 sm:w-2/4 w-full mx-auto sm:mx-0'>
