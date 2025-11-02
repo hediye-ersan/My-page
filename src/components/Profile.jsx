@@ -27,7 +27,7 @@ const Profile = () => {
         </div>
   
         {/* About Me */}
-        <div className="text-left p-6 sm:p-[32px] mb-16 sm:mt-12 w-full sm:w-2/5 bg-white dark:bg-transparent">
+        <div className="text-left p-6 sm:p-[32px] mb-16 sm:mt-12 w-full sm:w-2/5 bg-white rounded-xl dark:bg-transparent">
           <h3 className="text-xl sm:text-2xl font-playfair">{profileData.aboutMe.title}</h3>
           <div className="mt-4 space-y-2 text-base sm:text-lg">
             {profileData.aboutMe.text.map((paragraph, index) => (

@@ -9,7 +9,7 @@ const Skills = () => {
   const { currentLangContent } = useLanguage();
   const skillsData = currentLangContent.skills;
   return (
-    <section className="pt-20 pb-24 dark:bg-dark-bg2 dark:text-dark-text">
+    <section className=" pb-24 dark:bg-dark-bg2 dark:text-dark-text">
       
       <div className="flex items-center justify-center gap-4 pb-12">
         <h2 className="text-5xl font-bold">{skillsData.title}</h2>

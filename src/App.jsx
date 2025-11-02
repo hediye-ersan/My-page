@@ -1,14 +1,11 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 
 import LanguageProvider from './contexts/LanguageContext';
 import './reset.css'
 import WelcomeAnimation from './components/WelcomeAnimation';
-import Header from './components/Header';
-import Skills from './components/Skills';
-import Profile from './components/Profile';
-import Projects from './components/Projects';
-import Footer from './components/Footer';
-import Certificates from './components/Certificates';
+import HomePage from './components/HomePage';
+import NotFoundPage from './components/NotFoundPage';
 
 
 function App() {
@@ -17,15 +14,10 @@ function App() {
 
     <LanguageProvider>
       <WelcomeAnimation />
-        <div className='font-inter'>
-          <Header />
-          <Skills />
-          <Profile />
-          <Projects />
-          <Certificates />
-          <Footer />
-        </div>
-      
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
     </LanguageProvider>
 
   )
