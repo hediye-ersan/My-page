@@ -93,7 +93,7 @@ const Header = () => {
             })()}
           </h1>
 
-          <div className="flex flex-col-reverse sm:flex-row justify-between items-center gap-6">
+          <div className="flex flex-col-reverse sm:flex-row justify-between items-center gap-12">
             <p className="text-xl sm:text-2xl sm:pr-30 leading-relaxed sm:leading-snug text-justify">
               {bioData.text}
             </p>
