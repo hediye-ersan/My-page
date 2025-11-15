@@ -1,5 +1,4 @@
 import React from 'react';
-import WelcomeAnimation from './WelcomeAnimation';
 import Header from './Header';
 import Skills from './Skills';
 import Profile from './Profile';
@@ -10,7 +9,6 @@ import Footer from './Footer';
 const HomePage = () => {
   return (
     <>
-      <WelcomeAnimation />
       <div className='font-inter'>
         <Header />
         <Skills />
