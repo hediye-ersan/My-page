@@ -27,8 +27,8 @@ const Certificates = () => {
   }, [lightbox.open]);
 
   return (
-    <section className="bg-[#F4F4F4] dark:bg-dark-bg1 dark:text-dark-text px-4 sm:px-0 pt-16 pb-6">
-      <h2 className="text-4xl lg:text-5xl font-bold text-center font-playfair">{certData.title}</h2>
+    <section className="bg-[#F4F4F4] dark:bg-dark-bg1 dark:text-dark-text px-4 sm:px-0 pt-16 pb-6" aria-labelledby="certificates-heading">
+      <h2 id="certificates-heading" className="text-4xl lg:text-5xl font-bold text-center font-playfair">{certData.title}</h2>
 
       {/* Mobile/Tablet: 1-per-view carousel */}
       <div className="lg:hidden mt-10 px-4 sm:px-10">
@@ -57,6 +57,18 @@ const Certificates = () => {
                       alt={cert.description}
                       className="w-full h-auto object-contain cursor-zoom-in"
                       onClick={() => openLightbox(cert.image, cert.description)}
+                      loading="lazy"
+                      width="400"
+                      height="300"
+                      role="button"
+                      tabIndex={0}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                          e.preventDefault();
+                          openLightbox(cert.image, cert.description);
+                        }
+                      }}
+                      aria-label={`View ${cert.description} certificate in full size`}
                     />
                   </div>
                   <div className="mt-4">
@@ -123,6 +135,18 @@ const Certificates = () => {
                               alt={cert.description}
                               className="w-full h-auto object-contain cursor-zoom-in"
                               onClick={() => openLightbox(cert.image, cert.description)}
+                              loading="lazy"
+                              width="400"
+                              height="300"
+                              role="button"
+                              tabIndex={0}
+                              onKeyDown={(e) => {
+                                if (e.key === 'Enter' || e.key === ' ') {
+                                  e.preventDefault();
+                                  openLightbox(cert.image, cert.description);
+                                }
+                              }}
+                              aria-label={`View ${cert.description} certificate in full size`}
                             />
                           </div>
                           <div className="mt-4">
@@ -173,8 +197,8 @@ const Certificates = () => {
           >
             <button
               onClick={closeLightbox}
-              className="absolute -top-3 -right-3 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-full p-2 shadow-lg"
-              aria-label="Close"
+              className="absolute -top-3 -right-3 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-full p-2 shadow-lg focus:outline-none focus:ring-2 focus:ring-pink focus:ring-offset-2"
+              aria-label="Close certificate view"
             >
               <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
@@ -184,6 +208,7 @@ const Certificates = () => {
               src={lightbox.src}
               alt={lightbox.alt}
               className="w-full h-auto max-h-[85vh] object-contain rounded-lg bg-white dark:bg-gray-800"
+              loading="eager"
             />
           </div>
         </div>

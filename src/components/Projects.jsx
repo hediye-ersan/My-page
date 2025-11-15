@@ -110,8 +110,11 @@ const Projects = () => {
             <div className="flex w-full items-center justify-center">
               <motion.img 
                 src={project.image} 
-                alt={project.title} 
+                alt={`${project.title} project screenshot`} 
                 className="w-full h-auto object-cover shadow-lg transition-all duration-300 group-hover:blur-sm"
+                loading="lazy"
+                width="800"
+                height="600"
               /> 
             </div>
           </motion.div>
@@ -130,9 +133,12 @@ const Projects = () => {
         >
           <motion.a 
             href={project.viewGit.link || '#'}
-            className="inline-flex items-center justify-center px-4 py-2 bg-white/90 dark:bg-gray-900/90 text-gray-800 dark:text-gray-100 rounded-xl border border-gray-200 dark:border-gray-700 text-sm shadow-md"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center px-4 py-2 bg-white/90 dark:bg-gray-900/90 text-gray-800 dark:text-gray-100 rounded-xl border border-gray-200 dark:border-gray-700 text-sm shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             whileHover={{ scale: 1.05, y: -2, boxShadow: '0 10px 25px rgba(0,0,0,0.2)' }}
             whileTap={{ scale: 0.95 }}
+            aria-label={`View ${project.title} on GitHub`}
           >
             <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clipRule="evenodd" />
@@ -141,9 +147,12 @@ const Projects = () => {
           </motion.a>
           <motion.a 
             href={project.viewGit.buttonLink || '#'}
-            className="inline-flex items-center justify-center px-5 py-2 bg-blue-600 text-white rounded-xl text-sm shadow-md"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center px-5 py-2 bg-blue-600 text-white rounded-xl text-sm shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
             whileHover={{ scale: 1.05, y: -2, boxShadow: '0 10px 25px rgba(37,99,235,0.4)' }}
             whileTap={{ scale: 0.95 }}
+            aria-label={`Visit ${project.title} live application`}
           >
             {project.viewGit.button}
             <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -156,9 +165,9 @@ const Projects = () => {
   );
 
   return (
-    <section className="pt-20 pb-20 px-6 sm:px-12 lg:px-24 xl:px-36 dark:bg-dark-bg2 dark:text-dark-text">
+    <section className="pt-20 pb-20 px-6 sm:px-12 lg:px-24 xl:px-36 dark:bg-dark-bg2 dark:text-dark-text" aria-labelledby="projects-heading">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl lg:text-5xl font-bold text-center mb-16 text-black dark:text-white">
+        <h2 id="projects-heading" className="text-4xl lg:text-5xl font-bold text-center mb-16 text-black dark:text-white">
           {projectsData.title}
         </h2>
 
@@ -184,7 +193,7 @@ const Projects = () => {
               <motion.button
                 key={index}
                 onClick={() => setActiveProject(index)}
-                className={`w-3 h-3 rounded-full ${
+                className={`w-3 h-3 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${
                   index === activeProject 
                     ? 'bg-blue-600' 
                     : 'bg-gray-300 dark:bg-gray-600'
@@ -195,6 +204,8 @@ const Projects = () => {
                 whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 0.9 }}
                 transition={{ duration: 0.2 }}
+                aria-label={`Go to project ${index + 1}`}
+                aria-current={index === activeProject ? 'true' : 'false'}
               />
             ))}
           </div>
@@ -225,10 +236,11 @@ const Projects = () => {
           <div className="flex justify-between mt-8">
             <motion.button
               onClick={() => setActiveProject(activeProject > 0 ? activeProject - 1 : allProjects.length - 1)}
-              className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg border border-gray-200 dark:border-gray-700"
+              className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg border border-gray-200 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
               whileHover={{ scale: 1.1, boxShadow: '0 10px 25px rgba(0,0,0,0.2)', borderColor: '#60a5fa' }}
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.2 }}
+              aria-label="Previous project"
             >
               <svg className="w-6 h-6 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -236,10 +248,11 @@ const Projects = () => {
             </motion.button>
             <motion.button
               onClick={() => setActiveProject(activeProject < allProjects.length - 1 ? activeProject + 1 : 0)}
-              className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg border border-gray-200 dark:border-gray-700"
+              className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg border border-gray-200 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
               whileHover={{ scale: 1.1, boxShadow: '0 10px 25px rgba(0,0,0,0.2)', borderColor: '#60a5fa' }}
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.2 }}
+              aria-label="Next project"
             >
               <svg className="w-6 h-6 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

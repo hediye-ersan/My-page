@@ -33,10 +33,12 @@ const DarkModeToggle = () => {
   return (
     <div className='flex gap-1 justify-center items-center'>
     <button
-      className={`p-1 w-16  flex
+      className={`p-1 w-16 flex focus:outline-none focus:ring-2 focus:ring-pink focus:ring-offset-2
       ${isDarkMode ? 'bg-[#000000] text-yellow-300 justify-start' : 'bg-[#E92577] text-gray-800 justify-end'} 
       rounded-full transition-all duration-300`}
       onClick={toggleDarkMode}
+      aria-label={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+      aria-pressed={isDarkMode}
     >
       {/* İç yuvarlak simge */}
       <div
