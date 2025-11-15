@@ -88,21 +88,21 @@ const FeedbackModal = () => {
       const params = new URLSearchParams();
       params.append(FEEDBACK_FIELD_ID, feedback);
 
+      // URL ve Entry ID kontrolü
+      if (!GOOGLE_FORM_URL || !FEEDBACK_FIELD_ID) {
+        alert('Form yapılandırması eksik. Lütfen .env dosyasını kontrol edin.');
+        setIsSubmitting(false);
+        return;
+      }
+
       // Google Form'a POST isteği gönder
-      const response = await fetch(GOOGLE_FORM_URL, {
+      await fetch(GOOGLE_FORM_URL, {
         method: 'POST',
         mode: 'no-cors', // CORS hatası olmaması için
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
         },
         body: params.toString(),
-      });
-
-      // no-cors modunda response göremiyoruz, bu yüzden her zaman başarılı kabul ediyoruz
-      console.log('Form gönderildi:', {
-        url: GOOGLE_FORM_URL,
-        fieldId: FEEDBACK_FIELD_ID,
-        feedback: feedback.substring(0, 50) + '...',
       });
 
       setIsSubmitted(true);
@@ -113,7 +113,6 @@ const FeedbackModal = () => {
         handleCloseAfterSubmit();
       }, 3000);
     } catch (error) {
-      console.error('Feedback gönderilirken hata oluştu:', error);
       // Hata olsa bile kullanıcıya başarılı mesajı göster (no-cors nedeniyle)
       setIsSubmitted(true);
       setTimeout(() => {
